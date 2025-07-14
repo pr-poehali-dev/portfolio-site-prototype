@@ -110,9 +110,9 @@ export default function Index() {
             <p className="text-lg text-retro-dark mb-6">
               Создаю современные решения в стиле ретро
             </p>
-            <div className="flex justify-center gap-4">
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Button 
-                className="bg-retro-blue hover:bg-blue-400 border-2 border-retro-dark font-mono shadow-[2px_2px_0px_0px_#2C2C2C]"
+                className="bg-retro-blue hover:bg-blue-400 border-2 border-retro-dark font-mono shadow-[2px_2px_0px_0px_#2C2C2C] w-full sm:w-auto"
                 size="lg"
               >
                 <Icon name="Download" size={20} className="mr-2" />
@@ -120,7 +120,7 @@ export default function Index() {
               </Button>
               <Button 
                 variant="outline"
-                className="border-2 border-retro-dark bg-retro-white hover:bg-retro-gray font-mono shadow-[2px_2px_0px_0px_#2C2C2C]"
+                className="border-2 border-retro-dark bg-retro-white hover:bg-retro-gray font-mono shadow-[2px_2px_0px_0px_#2C2C2C] w-full sm:w-auto"
                 size="lg"
               >
                 <Icon name="Mail" size={20} className="mr-2" />
@@ -143,29 +143,29 @@ export default function Index() {
 
           {/* Tab Navigation */}
           <div className="flex justify-center mb-8">
-            <div className="flex border-2 border-retro-dark bg-retro-gray">
+            <div className="flex flex-col sm:flex-row border-2 border-retro-dark bg-retro-gray w-full sm:w-auto max-w-md">
               <Button
                 variant={activeTab === 'graphic' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('graphic')}
-                className={`rounded-none border-r-2 border-retro-dark font-mono ${
+                className={`rounded-none border-r-0 sm:border-r-2 border-b-2 sm:border-b-0 border-retro-dark font-mono text-sm sm:text-base px-3 sm:px-4 ${
                   activeTab === 'graphic' 
                     ? 'bg-retro-blue text-white' 
                     : 'bg-retro-gray hover:bg-retro-white'
                 }`}
               >
-                <Icon name="Image" size={20} className="mr-2" />
+                <Icon name="Image" size={16} className="mr-2" />
                 Графический дизайн
               </Button>
               <Button
                 variant={activeTab === 'motion' ? 'default' : 'ghost'}
                 onClick={() => setActiveTab('motion')}
-                className={`rounded-none font-mono ${
+                className={`rounded-none font-mono text-sm sm:text-base px-3 sm:px-4 ${
                   activeTab === 'motion' 
                     ? 'bg-retro-blue text-white' 
                     : 'bg-retro-gray hover:bg-retro-white'
                 }`}
               >
-                <Icon name="Play" size={20} className="mr-2" />
+                <Icon name="Play" size={16} className="mr-2" />
                 Motion дизайн
               </Button>
             </div>
