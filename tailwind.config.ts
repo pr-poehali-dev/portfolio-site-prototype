@@ -61,7 +61,17 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'retro-beige': '#F5F5DC',
+				'retro-blue': '#87CEEB',
+				'retro-white': '#FFFFFF',
+				'retro-dark': '#2C2C2C',
+				'retro-gray': '#C0C0C0'
+			},
+			fontFamily: {
+				'mono': ['Courier New', 'monospace'],
+				'system': ['MS Sans Serif', 'sans-serif'],
+				'pixel': ['Consolas', 'Monaco', 'monospace']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
